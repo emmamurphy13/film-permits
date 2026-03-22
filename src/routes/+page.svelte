@@ -4,15 +4,16 @@ This is your page!
 -->
 <script>
   // Import all the news furniture components
-  import ArticleHeader from '$lib/components/ArticleHeader.svelte';
+  import SplashHeader from '$lib/components/SplashHeader.svelte';
   import ArticleBody from '$lib/components/ArticleBody.svelte';
   import Image from '$lib/components/Image.svelte';
   import RelatedLinks from '$lib/components/RelatedLinks.svelte';
 
   // Article metadata
+  let kicker = 'Film Permits';
   let headline = 'Become a force for good. Join our next class.';
-  let byline = 'NYCity News Service';
-  let pubDate = '2026-01-31';
+  let deck = 'An exploration of how the city shaped stories through the permits it issued';
+  let pubDate = '2026-03-22';
 
   // Related stories
   const relatedStories = [
@@ -31,10 +32,11 @@ This is your page!
 <!-- Your page content goes here -->
 <div class="container">
   
-  <!-- Article Header: Headline, byline, and publication date -->
-  <ArticleHeader
+  <!-- Splash Header: Kicker, headline, deck, and publication date -->
+  <SplashHeader
+    {kicker}
     {headline}
-    {byline}
+    {deck}
     {pubDate}
   />
 
